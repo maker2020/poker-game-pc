@@ -1,0 +1,2 @@
+注意打包之前检查FXDLLFileLoader.java中的libProperty值是否为bin
+反之，报错ToolKit等，就将其改为javafx-sdk-11.0.2/bin

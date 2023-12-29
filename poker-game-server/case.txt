@@ -1,0 +1,20 @@
+必定的：1op , 2op, 3op
+变化的：4op
+
+存在4op的
+case:1opY 2opY 3opY 4opY 
+
+让给上一个的:
+case:1opY 2opY 3opY 4opN  ok
+case:1opY 2opY 3opN 4opN  ok
+case:1opY 2opN 3opY 4opN  ok
+case:1opN 2opY 3opY 4opY  ok
+case:1opN 2opY 3opY 4opN  ok
+...
+summary case: 第一或第二个人callBoss
+
+不存在4op的
+ok case1:1opY 2opN 3opN
+ok case2:1opN 2opY 3opN
+ok case3:1opN 2opN 3opY
+summary case: 仅有一个人callBoss

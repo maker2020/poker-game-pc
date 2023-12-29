@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="BOTTOM_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1152.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.fxclient.controller.GamePaneController">
+   <children>
+      <Pane prefHeight="483.0" prefWidth="1152.0">
+         <children>
+            <Label fx:id="roomIDLabel" alignment="CENTER" layoutX="541.0" layoutY="7.0" prefHeight="29.0" prefWidth="70.0" />
+            <Pane prefHeight="370.0" prefWidth="347.0">
+               <children>
+                  <Label fx:id="pLeftNameLabel" alignment="CENTER" layoutX="65.0" layoutY="73.0" prefHeight="35.0" prefWidth="60.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="pLeftTurnLabel" layoutX="133.0" layoutY="73.0" prefHeight="23.0" prefWidth="95.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Pane fx:id="leftPutPane" layoutX="157.0" layoutY="172.0" prefHeight="108.0" prefWidth="381.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="805.0" prefHeight="370.0" prefWidth="347.0">
+               <children>
+                  <Label fx:id="pRightNameLabel" alignment="CENTER" layoutX="234.0" layoutY="79.0" prefHeight="35.0" prefWidth="65.0" text="">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="pRightTurnLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="116.0" layoutY="79.0" prefHeight="23.0" prefWidth="95.0">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Pane fx:id="rightPutPane" layoutX="-98.0" layoutY="161.0" prefHeight="108.0" prefWidth="381.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="bossPokerPane" layoutX="443.0" layoutY="36.0" prefHeight="129.0" prefWidth="267.0">
+            </Pane>
+            <Pane fx:id="putPane" layoutX="374.0" layoutY="346.0" prefHeight="122.0" prefWidth="404.0" />
+            <Text fx:id="overText" fill="#d91616" layoutX="459.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="游戏结束，赢家：Samay" textAlignment="CENTER" visible="false">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Button fx:id="startHidden" layoutX="549.0" layoutY="272.0" mnemonicParsing="false" onMouseClicked="#driveStart" text="Button" visible="false" />
+         </children>
+      </Pane>
+      <Label fx:id="waitTip" alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="156.0" text="正在等待..." textAlignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Pane prefHeight="216.0" prefWidth="960.0">
+         <children>
+            <Button fx:id="readyBtn" defaultButton="true" layoutX="552.0" mnemonicParsing="false" onMouseClicked="#onReady" text="准备">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="callY" defaultButton="true" layoutX="608.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#onCallY" prefHeight="29.0" prefWidth="81.0" text="叫" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="callN" layoutX="460.0" layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#onCallN" prefHeight="29.0" prefWidth="81.0" text="不叫" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Pane fx:id="pokerPane" layoutX="246.0" layoutY="39.0" prefHeight="138.0" prefWidth="660.0" />
+            <Button fx:id="callPut" defaultButton="true" layoutX="608.0" mnemonicParsing="false" onMouseClicked="#onCallPut" prefHeight="29.0" prefWidth="81.0" text="出牌" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="callPass" cancelButton="true" layoutX="460.0" mnemonicParsing="false" onMouseClicked="#onCallPass" prefHeight="29.0" prefWidth="81.0" text="不出" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</VBox>
